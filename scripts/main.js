@@ -10,20 +10,13 @@ class LikeButton extends React.Component {
 
     render() {
         if (this.state.liked) {
-            e(
-                'button',
-                { onClick: () => this.setState({ liked: false }) },
-                'Goodbye for now'
-            );
+            return 'Goodbye for now';
         }
 
         return e(
             'button',
             { onClick: () => this.setState({ liked: true }) },
-            'Hello world'
+            'Hello world!'
         );
     }
 }
-
-const domContainer = document.querySelector('#main_container');
-ReactDOM.render(e(LikeButton), domContainer);
